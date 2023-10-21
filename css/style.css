@@ -1,0 +1,193 @@
+/* tipografia */
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100&family=Montserrat:wght@500;700&family=Noto+Sans+JP:wght@100;400;700;900&family=Space+Mono:wght@400;700&family=Young+Serif&family=Yuji+Hentaigana+Akari&display=swap');
+
+/* reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* body */
+body{
+    font-family: 'Yuji Hentaigana Akari', cursive;
+    /* background-image: url(/img/elephant-8253639_1920.jpg);
+    background-size: cover; */
+    background-color: #fbfbfb;
+
+}
+/* body p{
+    font-size: 14px;
+} */
+:root{
+    --clr-txt-box: rgba(128, 128, 128, 0.5);
+    --clr-wht: rgb(251, 251, 251);
+    --clr-txt: rgb(0, 0, 0);
+    --clr-hover: rgba(0, 0, 0, 0.562);
+}
+
+/* header */
+header{
+    width: 100%;
+    height: 5rem;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(251, 251, 251);
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.logo img{
+    height: 5rem;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+nav a:hover{
+    color: red;
+    transition: .2s;
+    transform: scale(1.5);
+}
+
+nav a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.redes i{
+    padding: 1rem;
+    font-size: 2rem;
+    color:rgb(0, 0, 0);
+}
+/* inicio */
+.titulo{
+    font-size: 1rem;
+    color: crimson;
+}
+
+#inicio{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh + 5rem);
+    width: 100vw;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/img/panda-2987596_1920.jpg);
+    background-size: cover;
+    color: #fbfbfb;
+}
+
+#inicio article p{
+    padding: 30px;
+}
+
+#inicio article h6{
+    padding-bottom: 25px;
+    letter-spacing: 5px;
+    font-weight: 400;
+}
+
+/* sobre mi */
+#sobre_mi{
+    height: calc(100vh + 5rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container_foto{
+    width: 30%;
+}
+
+aside{
+    width: 70%;
+    padding: 30px;
+    background-color: var(--clr-txt-box);
+    border-radius: 30px;
+    margin-right: 65px;
+}
+
+aside h3{
+    padding: 10px 0;
+    text-decoration: underline var(--clr-wht) 3px;
+}
+
+aside h2{
+    padding: 0 0 10px 0;
+}
+aside p{
+    padding: 10px 0;
+}
+aside a{
+    text-decoration: none;
+    color: inherit;
+}
+.foto{
+    display: block;
+    margin: auto;
+    height: 400px;
+    background-color: var(--clr-txt-box);
+    padding: 5px;
+    border-radius: 5%;
+}
+
+/* portafolio */
+#portafolio{
+    height: 100vh;
+}
+.subtitulo{
+    font-size: 2rem;
+    text-align: center;
+    letter-spacing: .5em;
+    padding: 35px;
+    margin-bottom: 50px;
+}
+.container_card{
+    width: 200px;
+}
+
+.container_portafolio{
+    display: grid;
+    grid-template: 3fr 250px / 1fr 250px ; 
+}
+.card{
+    width: 280px;
+}
+
+.card_img img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+@media (min-width:360px) and (max-width:600px) {
+    .foto{
+        height: 100px;
+    }
+    #inicio{
+        width: auto;
+        background-size:cover;
+        background-position: center;
+    }
+    nav, .redes{
+        display: flex;
+        flex-direction: column;
+    }
+    #sobre_mi{
+        flex-direction: column;
+        margin: auto;
+    }
+    .aside{
+        width: auto;
+        padding: 0;
+        justify-content: center;
+    }
+}
