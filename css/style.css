@@ -45,26 +45,45 @@ header{
     height: 5rem;
 }
 
-nav ul{
+nav .nav_list{
     list-style: none;
     display: flex;
     gap: 1rem;
 }
 nav a:hover{
-    color: red;
-    transition: .2s;
-    transform: scale(1.5);
+    color: crimson;
+    transition: 0.3s;
+}
+nav a:not(:hover){
+    color: inherit;
+    transition: 0.3s;
 }
 
 nav a{
     text-decoration: none;
     color: inherit;
+    transform: scale(1);
+    font-weight: 700;
 }
-
 .redes i{
     padding: 1rem;
     font-size: 2rem;
     color:rgb(0, 0, 0);
+    transform: scale(1);
+}
+
+.redes i:hover{
+    transition: 0.2s;
+    transform: scale(1.2);
+    color: crimson;
+}
+.redes i:not(:hover){
+    transform: scale(1);
+    transition: 0.2s;
+    color: rgb(0, 0, 0);
+}
+.menu_icono{
+    display: none;
 }
 /* inicio */
 .titulo{
@@ -133,7 +152,7 @@ aside a{
 .foto{
     display: block;
     margin: auto;
-    height: 400px;
+    height: 60vh;
     background-color: var(--clr-txt-box);
     padding: 5px;
     border-radius: 5%;
@@ -155,39 +174,148 @@ aside a{
 }
 
 .container_portafolio{
+    width: auto;
     display: grid;
-    grid-template: 3fr 250px / 1fr 250px ; 
+    gap: 2rem;
+    grid-template-columns: repeat( 3, 30%);
+    justify-items: center;
+    object-fit: cover;
 }
 .card{
     width: 280px;
+    text-align: center;
+    transform: scale(1);
+}
+.card:hover{
+    transition: 0.2s;
+    transform: scale(1.2);
+}
+.card:not(:hover){
+    transform: scale(1);
+    transition: 0.2s;
+}
+.card h5{
+    padding: 10px;
 }
 
 .card_img img{
     width: 100%;
-    height: 200px;
-    object-fit: cover;
+    object-fit:cover;
+    box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.1);
 }
 
+/* footer */
+footer{
+    width: 100%;
+    height: 70px;
+    background-color: var(--clr-wht);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 @media (min-width:360px) and (max-width:600px) {
-    .foto{
-        height: 100px;
+    /* header */
+    .redes{
+        display: none;
     }
+    .redes_open{
+        position: absolute;
+        margin: 475px 0 0 288px;
+        background-color: blue;
+        width: auto;
+        z-index: 2;
+    }
+    .redes i{
+        padding: 0 0 0 10px ;
+        margin: 0 0 0 10;
+    }
+    nav .nav_list{
+        display: none;
+    }
+    nav .nav_list_open{
+        position: absolute;
+        background-color: #fbfbfb;
+        flex-direction: column;
+        justify-content: start;
+        align-items: end;
+        padding: 50px 20px 0 0;
+        height: 100vh;
+        width: 150px;
+        right: 0;
+    }
+    /* menu hamburguesa (falta animarlo con js) */
+    .menu_icono{
+        right: 0;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        z-index: 1;
+    }
+    .menu_icono_open{
+        right: 0;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-right: 50px;
+        z-index: 1;
+    }
+    .line{
+        width: 25px;
+        height: 2px;
+        border: 1px solid crimson;
+        margin-right: 25px;
+    }
+    /* inicio */
     #inicio{
         width: auto;
         background-size:cover;
         background-position: center;
     }
-    nav, .redes{
+    /* sobre mi */
+    #sobre_mi{
+        height: 100%;
+        flex-direction: column;
+        margin: 50px 0 50px 0;
+    }
+    .container_foto{
+        width: auto;
+    }
+    .foto{
+        height: 50vh;
+    }
+    aside{
+        width: 80%;
+        margin: 30px 0 0 0;
+        text-align: justify;
+    }
+    aside h3,h2,h5{
+        text-align: center;
+    }
+    .btn{
+        width: 100%;
+    }
+    /* portafolio */
+    #portafolio{
+        height: auto;
+        width: 100%;
+    }
+    .container_portafolio{
+        width: 100%;
+        height: 100%;
         display: flex;
         flex-direction: column;
+        margin-left: 55px;
     }
-    #sobre_mi{
-        flex-direction: column;
-        margin: auto;
+    .card{
+        margin: 0 auto;
     }
-    .aside{
-        width: auto;
-        padding: 0;
-        justify-content: center;
+    /* footer */
+    footer{
+        margin-top: 50px;
+        width: 100%;
+        height: auto;
+        text-align: center;
     }
 }
