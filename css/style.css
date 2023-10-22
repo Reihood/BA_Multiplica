@@ -99,7 +99,7 @@ nav a{
     align-items: center;
     height: calc(100vh + 5rem);
     width: 100vw;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/img/panda-2987596_1920.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/panda-2987596_1920.jpg);
     background-size: cover;
     color: #fbfbfb;
 }
@@ -310,6 +310,10 @@ footer{
     }
     .card{
         margin: 0 auto;
+    }
+    .card:not(:hover){
+        transform: scale(1);
+        transition: 0.2s;
     }
     /* footer */
     footer{
