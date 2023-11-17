@@ -1,104 +1,108 @@
+Claro, aquí tienes el código con comentarios agregados y algunas correcciones en las etiquetas "p":
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio</title>
-    <link rel="stylesheet" href="./css/style.css"> <!-- hoja de estilo "css" -->
-    <script src="https://kit.fontawesome.com/854bf9aec7.js" crossorigin="anonymous"></script><!-- Iconos "font Aweson" -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> <!-- bootstrap -->
+    <title>Angel Freites</title>
+    <link rel="stylesheet" href="./CSS/stylex.css">
+    <link rel="icon" href="./IMG/logo_size.jpg">
 </head>
 <body>
+    <!-- Encabezado -->
     <header>
-        <div class="logo">
-            <a href="#"><img src="./img/f39fcae46ed423e1d349f5eafa71a2e9-removebg-preview.png" alt="logo"></a>
-        </div>
-        <nav class="nav">
-            <ul class="nav_list">
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#sobre_mi">Sobre mi</a></li>
-                <li><a href="#portafolio">Portafolio</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
-        <div class="redes">
-            <a href="https://www.linkedin.com/products/panda-trading-systems-panda-webtrader/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="https://github.com/pandas-dev" target="_blank"><i class="fa-brands fa-github"></i></a>
-        </div>
-        <div class="menu_icono">
-            <span class="line line1"></span>
-            <span class="line line2"></span>
-            <span class="line line3"></span>
+        <div class="container_header">
+            <!-- Logo -->
+            <div class="logo">
+                <a href="#"><img src="./IMG/logo_size-removebg-preview.png" alt="Logo"></a>
+            </div>
+            <!-- Menú -->
+            <div class="menu">
+                <nav class="nav">
+                    <ul>
+                        <li class="seleccionable1"><a href="#"><h4>Inicio</h4></a></li>
+                        <li class="seleccionable2"><a href="#proyectos"><h4>Proyectos</h4></a></li>
+                        <li class="seleccionable3"><a href="#contacto"><h4>Contacto</h4></a></li>
+                    </ul>
+                </nav>
+                <!-- Icono de menú -->
+                <div class="icono_menu" id="btn_abrir">
+                    <span class="linea1_barra_menu"></span>
+                    <span class="linea2_barra_menu"></span>
+                    <span class="linea3_barra_menu"></span>
+                </div>
+            </div>
         </div>
     </header>
-    <main>
-        <section id="inicio">
-            <article>
-                <h6>BIENVENIDOS</h6>
-                <h1>Soy <span class="titulo">Panda</span>, Desarrollador Web</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae.</p>
-            </article>
 
-        </section>
-        <section id="sobre_mi">
-            <article class="container_foto">
-                <img class="foto" src="https://i.pinimg.com/564x/ce/f3/14/cef3142ce7e0089ba6b5e9ba3d34ab6b.jpg" alt="foto">
-            </article>
-            <aside>
-                <h3>SOBRE MI</h3>
-                <h2>Hola, soy <span style="color: crimson;">Panda</span></h2>
-                <h5>DESARROLLADOR WEB</h5>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis aut commodi asperiores ullam dicta quia veritatis aspernatur, inventore, culpa obcaecati est architecto iusto id debitis.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit dolores a molestiae animi voluptates deserunt.</p>
-                <button type="button" class="btn btn-outline-primary"><a href="https://i.pinimg.com/564x/6d/fb/ed/6dfbed3a10a2320b46ec2c5ff831da42.jpg" target="_blank">Descargar CV</a></button>
-            </aside>
-        </section>
-        <section id="portafolio">
-            <article class="subtitulo">
-                <h3>PORTAFOLIO DE PROYECTOS</h3>
-            </article>
-            <article class="container_portafolio">
-                <div class="container_card">
-                    <article class="card">
-                    <div class="card_img">
-                        <a href="https://github.com/Reihood/MenuHamburguesa"><img src="./img/Captura de pantalla 2023-10-22 120424.png" alt="Menu Hamburguesa"></a>
-                    </div>
-                    <h5>Menu Hamburguesa</h5>
-                    </article>
+    <!-- Contenido principal -->
+    <main>
+        <!-- Sección de inicio -->
+        <section class="container_inicio">
+            <div class="foto">
+                <img src="./IMG/foto.jpg" alt="Foto de presentación">
+            </div>
+            <div class="sobre_mi">
+                <h1>¡Hola! Soy Angel </h1>
+                <p>Soy un apasionado por la programación y la música. La disciplina, la dedicación y el compromiso son tres factores que me definen. Me gusta dar siempre el 100%, no importa qué tan simple o compleja sea la tarea.</p>
+                <div class="btn">
+                    <button id="btn">
+                        <a href="./PDF/Angel freites CV.pdf" target="_blank"><h3>Descargar CV</h3></a>
+                    </button>
                 </div>
-                <div class="container_card">
-                    <article class="card">
-                    <div class="card_img">
-                        <a href="https://github.com/Reihood/ColorFlipper" target="_blank"><img src="./img/Color_Flipper.png" alt="Color Flipper"></a>
-                    </div>
-                    <h5>Color Flipper</h5>
-                    </article>
-                </div>
-                <div class="container_card">
-                    <article class="card">
-                    <div class="card_img">
-                        <a href="https://github.com/Reihood/Calculadora" target="_blank"><img src="./img/Captura de pantalla 2023-10-22 122805.png" alt="Calculadora"></a>
-                    </div>
-                    <h5>Calculadora</h5>
-                    </article>
-                </div>
-            </article>
+            </div>
         </section>
-        <section>
-            <article></article>
+
+        <!-- Sección de proyectos -->
+        <section class="container_proyectos" id="proyectos">
+            <div class="texto_proyecto">
+                <h2>Mis proyectos</h2>
+                <p>A continuación te mostraré algunos de mis trabajos realizados. ¡Disfrútenlos!</p>
+            </div>
+            <div class="container_img_proyectos">
+                <a href="https://github.com/Reihood/MenuHamburguesa" target="_blank"><img src="./IMG/Menu Hamburguesa.png" alt="Menú Hamburguesa" title="Menú Hamburguesa" class="img-proyectos"></a>
+                <a href="https://github.com/Reihood/Calculadora.git" target="_blank"><img src="./IMG/Calculadora.png" alt="Calculadora" title="Calculadora" class="img-proyectos"></a>
+                <a href="https://github.com/Reihood/ColorFlipper.git" target="_blank"><img src="./IMG/Color Flipper.png" alt="Color Flipper" title="Color Flipper" class="img-proyectos"></a>
+            </div>
         </section>
-        <section>
-            <article></article>
+
+        <!-- Sección de tecnologías -->
+        <section class="container_tecnologias">
+            <div class="texto_tecnologias">
+                <h2>Tecnologías</h2>
+            </div>
+            <div class="container_img_tecnologias">
+                <img src="./IMG/html-5.png" alt="HTML5" title="HTML5">
+                <img src="./IMG/css-3.png" alt="CSS" title="CSS">
+                <img src="./IMG/js.png" alt="JavaScript" title="JavaScript">
+            </div>
         </section>
-        <section>
-            <article></article>
-        </section>
-        <section>
-            <article></article>
+
+        <!-- Sección de contacto -->
+        <section class="container_contacto" id="contacto">
+            <div class="texto_contacto">
+                <h2>Contacto</h2>
+                <p>Me encantaría tener la oportunidad de conversar sobre cómo puedo contribuir al crecimiento y éxito de tu empresa. Estoy abierto a nuevas oportunidades y desafíos que me permitan crecer profesionalmente y aplicar mis conocimientos de manera efectiva.</p>
+            </div>
+            <div class="container_img_contacto">
+                <a href="mailto:eduardo112292@gmail.com"><img src="./IMG/mail.png" alt="Email"></a>
+                <a href="https://www.linkedin.com/in/angel-freites-a84611b3/" target="_blank"><img src="./IMG/linkedin.png" alt="LinkedIn"></a>
+                <a href="https://github.com/Reihood" target="_blank"><img src="./IMG/github.png" alt="GitHub"></a>
+            </div>
         </section>
     </main>
+
+    <!-- Pie de página -->
     <footer>
-        <p>© 2021 - Todos los derechos reservados | Diseñado por: Panda</p>
+        <p>&copy; Angel Freites, todos los derechos reservados</p>
     </footer>
+
+    <!-- Script -->
+    <script src="./JS/index.js"></script>
 </body>
 </html>
+```
+
+Espero que estos comentarios y correcciones sean útiles. Si tienes alguna pregunta adicional, no dudes en preguntar.
